@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+            src="https://kit.fontawesome.com/64d58efce2.js"
+            crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+<h:form class="sign-in-form" id="frmLogin">
+
+    <h2 class="title">BIENVENIDO</h2>
+    <div class="input-field">
+        <i class="fas fa-user"></i>
+        <p:inputText value="#{usuarioC.usuario.NICKUSU}" placeholder="Username" style="text-decoration: none;"/>
+    </div>
+    <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <p:password value="#{usuarioC.usuario.PSSUSU}" placeholder="Password" feedback="true"  />
+    </div>
+
+    <p:commandButton id="btnSesion" value="INGRESAR" action="#{usuarioC.iniciarSesion}" class="btn btn-danger btn-md "  icon="fa fa-sign-in" iconPos="true" style="width: 280px"/>
+
+
+</h:form>
+</body>
+</html>
